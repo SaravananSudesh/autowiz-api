@@ -14,4 +14,8 @@ app.use(cors())
 app.use('/api/cars', carRoutes)
 app.use('/api/filter', filterRoutes)
 
+app.get('/', (req,res)=>{
+    res.send('<h1>Autowiz API</h1>');
+})
+
 exports.app = functions.https.onRequest(app)
